@@ -1,0 +1,135 @@
+# c:\xampp\htdocs\project\FOLDER_STRUCTURE.txt
+# Multi-School Question Paper Generator SaaS - Complete Directory Tree
+
+project/
+│
+├── index.php                          # Landing page / redirect to login
+├── .htaccess                          # URL rewriting & security rules
+├── schema.sql                         # Complete database schema
+├── dummy_data.sql                     # Test users and sample data
+├── README_INSTALLATION.txt            # Setup instructions
+│
+├── config/                            # Configuration files
+│   ├── constants.php                  # Global constants (DB, paths, roles)
+│   ├── db_connect.php                 # Secure PDO database connection
+│   └── session_config.php             # Session management configuration
+│
+├── includes/                          # Core utility files
+│   ├── functions.php                  # Global utility functions
+│   ├── auth_check.php                 # Authentication verification
+│   └── header.php                     # Common HTML header
+│   └── footer.php                     # Common HTML footer
+│   └── navbar.php                     # Navigation bar template
+│
+├── assets/                            # Static resources
+│   ├── css/
+│   │   ├── style.css                  # Custom styles
+│   │   ├── print.css                  # Print-specific styles for papers
+│   │   └── bootstrap.min.css          # Bootstrap 5 (or CDN link)
+│   │
+│   ├── js/
+│   │   ├── main.js                    # Core AJAX & dependent dropdowns
+│   │   ├── paper_generator.js         # Paper generation interface logic
+│   │   ├── jquery.min.js              # jQuery library
+│   │   └── bootstrap.bundle.min.js    # Bootstrap JS
+│   │
+│   └── images/
+│       ├── logo.png
+│       └── default-avatar.png
+│
+├── uploads/                           # User uploaded content
+│   ├── questions/                     # Question images
+│   └── schools/                       # School logos
+│
+├── auth/                              # Authentication module
+│   ├── login.php                      # Login page & handler
+│   ├── logout.php                     # Logout handler
+│   └── forgot_password.php            # Password recovery (future)
+│
+├── admin/                             # Super Admin Panel
+│   ├── index.php                      # Admin dashboard
+│   ├── dashboard.php                  # Dashboard view
+│   │
+│   ├── schools/                       # School management
+│   │   ├── list.php                   # View all schools
+│   │   ├── add.php                    # Add new school
+│   │   ├── edit.php                   # Edit school
+│   │   └── delete.php                 # Delete school
+│   │
+│   ├── users/                         # User management
+│   │   ├── list.php                   # View all users
+│   │   ├── add.php                    # Add new user
+│   │   ├── edit.php                   # Edit user
+│   │   └── delete.php                 # Delete user
+│   │
+│   ├── boards/                        # Board management (CBSE, ICSE, etc.)
+│   │   ├── list.php
+│   │   ├── add.php
+│   │   ├── edit.php
+│   │   └── delete.php
+│   │
+│   ├── standards/                     # Class/Standard management
+│   │   ├── list.php
+│   │   ├── add.php
+│   │   ├── edit.php
+│   │   └── delete.php
+│   │
+│   ├── subjects/                      # Subject management
+│   │   ├── list.php
+│   │   ├── add.php
+│   │   ├── edit.php
+│   │   └── delete.php
+│   │
+│   └── chapters/                      # Chapter management
+│       ├── list.php
+│       ├── add.php
+│       ├── edit.php
+│       └── delete.php
+│
+├── teacher/                           # Teacher Panel
+│   ├── index.php                      # Teacher dashboard
+│   ├── dashboard.php                  # Dashboard view
+│   │
+│   ├── questions/                     # Question bank management
+│   │   ├── list.php                   # View all questions
+│   │   ├── add.php                    # Add new question (with image upload)
+│   │   ├── edit.php                   # Edit question
+│   │   ├── delete.php                 # Delete question
+│   │   └── upload_handler.php         # Image upload handler
+│   │
+│   └── papers/                        # Paper generation & management
+│       ├── create.php                 # Create paper blueprint
+│       ├── generate.php               # Generate paper from blueprint
+│       ├── list.php                   # View generated papers
+│       ├── preview.php                # Preview paper
+│       ├── print.php                  # Print view (A4 format)
+│       └── delete.php                 # Delete paper
+│
+├── modules/                           # Business logic modules
+│   ├── paper_generator/
+│   │   ├── generate.php               # Core paper generation algorithm
+│   │   └── blueprint_handler.php      # Blueprint processing logic
+│   │
+│   ├── ajax/                          # AJAX endpoints
+│   │   ├── get_standards.php          # Get standards by board
+│   │   ├── get_subjects.php           # Get subjects by standard
+│   │   ├── get_chapters.php           # Get chapters by subject
+│   │   ├── get_questions.php          # Get questions by filters
+│   │   └── save_paper.php             # Save generated paper
+│   │
+│   └── models/                        # Data access layer
+│       ├── School.php                 # School model
+│       ├── User.php                   # User model
+│       ├── Board.php                  # Board model
+│       ├── Standard.php               # Standard model
+│       ├── Subject.php                # Subject model
+│       ├── Chapter.php                # Chapter model
+│       ├── Question.php               # Question model
+│       └── Paper.php                  # Paper model
+│
+└── templates/                         # View templates
+    ├── paper_print_view.php           # A4 printable paper template
+    ├── paper_preview.php              # Paper preview template
+    └── email_templates/               # Email templates (future use)
+        └── welcome.php
+

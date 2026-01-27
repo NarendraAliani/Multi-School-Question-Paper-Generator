@@ -1,0 +1,5 @@
+board_name,standard_name,subject_name,chapter_name,question_text,question_type,difficulty_level,marks,option_a,option_b,option_c,option_d,correct_answer,solution
+CBSE,Class 10,Mathematics,Algebra,"Solve for x: 2x + 5 = 15",short_answer,easy,2,,,,,,x = 5
+CBSE,Class 10,Mathematics,Algebra,"What is the value of x in x² - 5x + 6 = 0?",mcq,medium,3,x=2,x=3,x=2 or x=3,x=1,C,"Factorize: (x-2)(x-3)=0, so x=2 or x=3"
+CBSE,Class 10,Science,Physics,"Define Newton's First Law of Motion.",long_answer,medium,5,,,,,,An object remains at rest or in uniform motion unless acted upon by an external force.
+ICSE,Class 9,English,Grammar,"Identify the noun in: The quick brown fox jumps.",mcq,easy,1,quick,brown,fox,jumps,C,Fox is the noun in the sentence.
